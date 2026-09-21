@@ -67,7 +67,7 @@ pipeline{
                 echo 'Scanning for security vulnerabilities ....'
                 withCredentials([
                     string(
-                        credentialsID: 'snyk-token',
+                        credentialsId: 'snyk-token',
                         variable: 'snyk_token'
                     )
                 ]) {
