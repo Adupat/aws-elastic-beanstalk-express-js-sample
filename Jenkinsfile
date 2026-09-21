@@ -83,6 +83,12 @@ pipeline{
             steps {
                 echo 'Building Docker Image....'
                 sh "docker build -t ${IMAGE_TAG} ."
+
+                echo 'Saving Docker Image Info.....'
+                sh 'docker image inspect ${IMAGE_TAG} > docker-image-info.json'
+
+                archiveArtifacts artifacts: 'docker-image-info.json',
+                                 fingerprint: true
             }
         }
 
