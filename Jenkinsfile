@@ -6,7 +6,7 @@ pipeline{
     environment {
         DOCKER_REGISTRY = 'adupat'
         APP_NAME = 'aws-elastic-beanstalk-express-js-sample'
-        IMAGE_TAG = "${DOCKER_REGISTRY}/${APP_NAME}:LATEST"
+        IMAGE_TAG = "${DOCKER_REGISTRY}/${APP_NAME}:latest"
 
         // Connection to the Docker-in-Docker daemon running on the host machine
         DOCKER_HOST = 'tcp://docker:2376'
